@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexey CG Artist Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body>
+    <!--<canvas id="vanta-bg"></canvas>-->
+
+    <!-- Навигация -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav container">
+                <a href="index.html" class="logo">Alexey CG .. <</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                    <li><a href="index.html#portfolio" class="nav-link">Проекты</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <i data-feather="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Лучшие <span class="accent">проекты</span></h1>
+                <p class="page-subtitle">Нажмите на карточку работы для просмотра подробностей</p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Проект 1: Mansion -->
+                    <a href="project.html?id=1" class="project-card-link">
+                        <div class="project-card project-card--full">
+                            <div class="project-image">
+                                <img src="img/proj1-1.jpg" alt="Mansion" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Mansion</h3>
+                                <p class="project-category">Архитектурная визуализация</p>
+                                <p class="project-description">Реконструкция карты из одной популярной игры.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 2: Комната -->
+                    <a href="project.html?id=2" class="project-card-link">
+                        <div class="project-card project-card--full">
+                            <div class="project-image">
+                                <img src="img/proj2-1.jpg" alt="Комната" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Комната</h3>
+                                <p class="project-category">Архитектурная визуализация</p>
+                                <p class="project-description">Интерьерная визуализация жилого пространства.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 3: Admon -->
+                    <a href="project.html?id=3" class="project-card-link">
+                        <div class="project-card project-card--full">
+                            <div class="project-image">
+                                <img src="img/proj3-1.png" alt="Admon" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Admon</h3>
+                                <p class="project-category">Продуктовый дизайн</p>
+                                <p class="project-description">Визуализация технологичного продукта.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 4: Enchanted armory -->
+                    <a href="project.html?id=4" class="project-card-link">
+                        <div class="project-card project-card--full">
+                            <div class="project-image">
+                                <img src="img/proj4-1.jpg" alt="Enchanted armory" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Enchanted armory</h3>
+                                <p class="project-category">Игровые модели</p>
+                                <p class="project-description">Модели для компьютерной игры в скандинавской тематике.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="copyright">© 2026 Alexey CG Artist.</p>
+            <div class="social-links">
+                <a href="https://t.me/s01evar" class="social-link" aria-label="Telegram">
+                    <i data-feather="send"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="projects-data.js"></script>
+</body>
+</html>

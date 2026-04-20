@@ -1,0 +1,413 @@
+/* Страница проекта */
+.back-container {
+    padding-top: 40px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.back-link i {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+}
+.back-link:hover {
+    color: #fbbf24;
+}
+
+.project-header {
+    padding: 20px 0 40px;
+}
+
+.project-page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-page-subtitle {
+    font-size: 1.25rem;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Вьювер */
+.project-viewer {
+    margin-bottom: 60px;
+}
+
+.viewer-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 12px;
+}
+
+.viewer-tab {
+    background: none;
+    border: none;
+    color: #a1a1aa;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+.viewer-tab:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+}
+.viewer-tab.active {
+    color: #fbbf24;
+    background: rgba(251,191,36,0.1);
+}
+
+.viewer-panel {
+    display: none;
+}
+.viewer-panel.active {
+    display: block;
+}
+
+/* Слайдер изображений */
+.image-slider,
+.viewer-3d-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slider-main {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    z-index: 5;
+}
+.slider-nav:hover {
+    background: #fbbf24;
+    color: #000;
+    border-color: #fbbf24;
+}
+.slider-nav.prev {
+    left: 20px;
+}
+.slider-nav.next {
+    right: 20px;
+}
+.slider-nav i {
+    width: 24px;
+    height: 24px;
+}
+
+.slider-thumbnails {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s, border 0.2s;
+    border: 2px solid transparent;
+    flex-shrink: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail:hover {
+    opacity: 0.9;
+}
+.thumbnail.active {
+    opacity: 1;
+    border-color: #fbbf24;
+}
+
+/* 3D Viewer */
+#canvas-container {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: #050505;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    touch-action: none; /* предотвращает жесты браузера при зуме модели */
+    display: block;
+}
+
+.viewer-controls {
+    margin-top: 16px;
+    text-align: center;
+}
+.viewer-hint {
+    color: #a1a1aa;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+.viewer-hint i {
+    width: 18px;
+    height: 18px;
+    color: #fbbf24;
+}
+
+/* Детали проекта */
+.project-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.project-description h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+.project-description h3 {
+    font-size: 1.5rem;
+    margin: 32px 0 16px;
+}
+.project-description p {
+    color: #d4d4d8;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.feature-list {
+    list-style: none;
+}
+.feature-list li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 12px;
+    color: #d4d4d8;
+}
+.feature-list li::before {
+    content: "•";
+    color: #fbbf24;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.meta-item {
+    margin-bottom: 32px;
+}
+.meta-item h4 {
+    color: #a1a1aa;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+.meta-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Фиксированная навигация */
+.project-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(251, 191, 36, 0.2);
+    padding: 16px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #fbbf24;
+}
+
+.nav-link.prev i {
+    margin-right: 4px;
+}
+
+.nav-link.next i {
+    margin-left: 4px;
+}
+
+/* Отступ для контента, чтобы не перекрывался фиксированной навигацией */
+main {
+    padding-bottom: 80px; /* высота навигации + дополнительное пространство */
+}
+
+/* ================= АДАПТИВНОСТЬ ================= */
+@media (max-width: 768px) {
+    .project-page-title {
+        font-size: 2.5rem;
+    }
+    .project-details-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .slider-nav {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-link span {
+        display: none;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 8px);   /* прямо под кнопкой */
+        right: 0;
+        background: rgba(11, 11, 11, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 16px;
+        padding: 16px 20px;
+        gap: 12px;
+        z-index: 20;
+        min-width: 160px;
+        text-align: right;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-link {
+        font-size: 1 rem;
+        padding: 6px 0;
+        white-space: nowrap;
+    }
+
+    main {
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-page-title {
+        font-size: 2rem;
+    }
+    .project-page-subtitle {
+        font-size: 1rem;
+    }
+    .viewer-tab {
+        font-size: 0.9rem;
+        padding: 6px 16px;
+    }
+    .image-slider {
+        padding: 12px;
+    }
+    .slider-nav {
+        width: 36px;
+        height: 36px;
+    }
+    .thumbnail {
+        width: 80px;
+        height: 56px;
+    }
+    .project-description h2 {
+        font-size: 1.75rem;
+    }
+    .meta-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .back-container {
+        padding-top: 20px;
+    }
+    .project-header {
+        padding: 10px 0 20px;
+    }
+    .project-page-title {
+        font-size: 1.8rem;
+    }
+    .viewer-tabs {
+        flex-wrap: wrap;
+    }
+    .viewer-tab {
+        flex: 1 0 40%;
+        text-align: center;
+    }
+    .slider-main {
+        aspect-ratio: 4 / 3;
+    }
+    .thumbnail {
+        width: 70px;
+        height: 50px;
+    }
+    .project-description h2 {
+        font-size: 1.5rem;
+    }
+    .project-description h3 {
+        font-size: 1.3rem;
+    }
+    .nav-container {
+        padding: 0 16px;
+    }
+}

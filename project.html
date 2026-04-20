@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexey CG Artist project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--<canvas id="vanta-bg"></canvas>-->
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav container">
+                <a href="index.html" class="logo">Alexey CG .. <<</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Навыки</a></li>
+                    <li><a href="projects.html" class="nav-link">Проекты</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <i data-feather="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container back-container">
+            <a href="projects.html" class="back-link">
+                <i data-feather="arrow-left"></i> Назад к проектам
+            </a>
+        </div>
+
+        <section class="project-header">
+            <div class="container">
+                <h1 class="project-page-title" id="project-title">Загрузка...</h1>
+                <p class="project-page-subtitle" id="project-category"></p>
+            </div>
+        </section>
+
+        <section class="project-viewer">
+            <div class="container">
+                <div class="viewer-tabs">
+                    <button class="viewer-tab active" data-tab="images">Изображения</button>
+                    <button class="viewer-tab" data-tab="3d">3D-просмотр</button>
+                </div>
+
+                <div id="images-view" class="viewer-panel active">
+                    <div class="image-slider">
+                        <div class="slider-main">
+                            <img id="main-image" src="" alt="" class="main-image">
+                            <button class="slider-nav prev" id="prev-image"><i data-feather="chevron-left"></i></button>
+                            <button class="slider-nav next" id="next-image"><i data-feather="chevron-right"></i></button>
+                        </div>
+                        <div class="slider-thumbnails" id="thumbnails"></div>
+                    </div>
+                </div>
+
+                <div id="3d-view" class="viewer-panel">
+                    <div id="canvas-container" style="width: 100%; position: relative;"></div>
+                    <div class="viewer-controls">
+                        <p class="viewer-hint"><i data-feather="rotate-cw"></i> Вращайте модель мышью, колесо — масштаб</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-details section">
+            <div class="container project-details-grid">
+                <div class="project-description">
+                    <h2>О проекте</h2>
+                    <p id="project-description"></p>
+                    <h3>Особенности</h3>
+                    <ul class="feature-list" id="project-features"></ul>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <h4>Софт</h4>
+                        <p id="project-software"></p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Дата</h4>
+                        <p id="project-date"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Фиксированная нижняя навигация между проектами -->
+        <div class="project-bottom-nav">
+            <div class="container nav-container">
+                <a id="prev-project" href="#" class="nav-link prev">
+                    <i data-feather="arrow-left"></i>
+                    <span>Предыдущий проект</span>
+                </a>
+                <a id="next-project" href="#" class="nav-link next">
+                    <span>Следующий проект</span>
+                    <i data-feather="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="projects-data.js"></script>
+    <script type="module" src="project-viewer.js"></script>
+</body>
+</html>

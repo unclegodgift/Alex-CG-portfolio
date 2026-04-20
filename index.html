@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexey CG Artist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <canvas id="vanta-bg"></canvas>
+
+    <!-- Навигация -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav container">
+                <a href="#" class="logo">Alexey CG</a>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="#skills" class="nav-link">Навыки</a></li>
+                    <li><a href="#portfolio" class="nav-link">Проекты</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Меню">
+                    <i data-feather="menu"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="hero-subtitle">3D Художник</p>
+                    <h1 class="hero-title">
+                        Моделирование. <br> Текстурирование. <br> Анимация.
+                    </h1>
+                    <p class="hero-description">
+                        Специализируюсь на 3D моделировании, визуализации и анимации. Помогаю брендам и частным лицам воплощать идеи в объёме.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">Смотреть работы</a>
+                        <a href="#contact" class="btn btn-outline">Связаться</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div id="hero-canvas-container" style="width: 100%; height: 100%; min-height: 400px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Обо мне -->
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">Обо <span class="accent">мне</span></h2>
+                    <p class="about-text">
+                        Меня зовут Алексей Слуцкий. Я начинающий 3D-художник. На данный момент работаю в программе Blender, но развиваю навыки и в другом софте.
+                    </p>
+                    <p class="about-text">
+                        Я страюсь быть универсалом, чтобы понимать поставленную задачу как можно глубже. Развиваю свои навыки во всех возможных плоскостях работы с 3D, чтобы быть максимально полезным любому заказчику.
+                    </p>
+                    <p class="about-text">
+                        Работаю удалённо с клиентами по всему миру. Готов включиться в ваш проект на любом этапе — от концепта до финального рендера.
+                    </p>
+                </div>
+                <div class="about-image">
+                        <img src="img/autor.jpg" alt="Фото автора" class="author-photo">
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Навыки -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Мой <span class="accent">инструментарий</span></h2>
+                
+                <!-- Сетка иконок навыков -->
+                <div class="skills-stack">
+                    <!-- Основной инструмент -->
+                    <div class="primary-tool">
+                        <div class="tool-icon">
+                            <img src="img/icons/blender.svg" alt="Blender" class="tool-logo">
+                        </div>
+                        <h3 class="tool-title">Blender</h3>
+                        <p class="tool-desc">Основной инструмент</p>
+                    </div>
+
+                    <!-- Разделитель -->
+                    <div class="tools-divider"></div>
+
+                    <!-- Вспомогательные программы (без подписей) -->
+                    <div class="secondary-tools">
+                        <div class="tool-icon-simple" data-tooltip="Photoshop">
+                            <img src="img/icons/photoshop.svg" alt="Photoshop" class="tool-logo">
+                        </div>
+                        <div class="tool-icon-simple" data-tooltip="DaVinci Resolve">
+                            <img src="img/icons/davinci.png" alt="DaVinci Resolve" class="tool-logo">
+                        </div>
+                        <div class="tool-icon-simple" data-tooltip="Figma">
+                            <img src="img/icons/figma.png" alt="Figma" class="tool-logo">
+                        </div>
+                        <div class="tool-icon-simple" data-tooltip="Illustrator">
+                            <img src="img/icons/illustrator.png" alt="Illustrator" class="tool-logo">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="skills-details">
+            <div class="container">
+                
+                <div class="skills-columns">
+                    <div class="skills-column">
+                        <h3 class="skills-column-title">Hard Skills</h3>
+                        <ul class="skills-list">
+                            <li>Hard-surface моделирование</li>
+                            <li>Скульптинг</li>
+                            <li>Ретопология любых объектов</li>
+                            <li>Создание материалов в Blender</li>
+                            <li>Базовый риггинг и анимация персонажей</li>
+                            <li>UV-развертки</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <h3 class="skills-column-title">Soft Skills</h3>
+                        <ul class="skills-list">
+                            <li>Опыт работы в командных проектах</li>
+                            <li>Спокойное восприятие критики</li>
+                            <li>Пунктуальность и внимание к требованиям заказчика</li>
+                            <li>Умение презентовать проект и аргументировать принятые в производстве решения</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Портфолио -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section-title text-center">Избранные <span class="accent">проекты</span></h2>
+                
+                <div class="portfolio-grid">
+                    <!-- Проект 1 -->
+                    <a href="project.html?id=1" class="project-card-link">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/proj1-1.jpg" alt="Mansion" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Mansion</h3>
+                                <p class="project-description">Архитектурная визуализация.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 2 -->
+                    <a href="project.html?id=2" class="project-card-link">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/proj2-1.jpg" alt="Комната" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Комната</h3>
+                                <p class="project-description">Архитектурная визуализация.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 3 -->
+                    <a href="project.html?id=3" class="project-card-link">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/proj3-1.png" alt="Комната" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Admon</h3>
+                                <p class="project-description">Продуктовый дизайн.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Проект 4 -->
+                    <a href="project.html?id=4" class="project-card-link">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="img/proj4-1.jpg" alt="Комната" class="project-thumbnail">
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Enchanted armory</h3>
+                                <p class="project-description">Модели для компьютерной игры.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Blender</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio-more">
+                    <a href="projects.html" class="link-arrow">
+                        Смотреть все работы
+                        <i data-feather="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Контакты -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 class="section-title text-center">Давайте <span class="accent">работать вместе</span></h2>
+                    <p class="contact-subtitle">
+                        Есть идея проекта? Напишите мне — обсудим детали и сроки.
+                    </p>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3 class="contact-heading">Контакты</h3>
+                            <ul class="contact-list">
+                                <li class="contact-item">
+                                    <span class="contact-icon"><i data-feather="mail"></i></span>
+                                    <div>
+                                        <span class="contact-label">Email</span>
+                                        <a href="mailto:slalex2003@gmail.com" class="contact-link">slalex2003@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="contact-item">
+                                    <span class="contact-icon"><i data-feather="send"></i></span>
+                                    <div>
+                                        <span class="contact-label">Telegram</span>
+                                        <a href="https://t.me/s01evar" class="contact-link">@s01evar</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <form id="contact-form" class="space-y-5">
+                                <div class="form-group">
+                                    <input type="text" name="from_name" placeholder="Ваше имя / название компании" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="from_email" placeholder="Email" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" rows="4" placeholder="Опишите задачу..." class="form-input" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="copyright">© 2026 Alexey CG Artist.</p>
+            <div class="social-links">
+                <a href="https://t.me/s01evar" class="social-link" aria-label="Telegram">
+                    <i data-feather="send"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="projects-data.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="hero-3d.js"></script>
+</body>
+</html>
